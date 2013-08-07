@@ -659,16 +659,7 @@ wipe_data(int confirm) {
         }
 
         char* items[] = { " No",
-                          " No",
-                          " No",
-                          " No",
-                          " No",
-                          " No",
-                          " No",
                           " Yes -- delete all user data",   // [7]
-                          " No",
-                          " No",
-                          " No",
                           NULL };
 
         int chosen_item = get_menu_selection(title_headers, items, 1, 0);
@@ -733,7 +724,7 @@ prompt_and_wait() {
                     int status = install_package(SDCARD_PACKAGE_FILE);
                     if (status != INSTALL_SUCCESS) {
                         ui_set_background(BACKGROUND_ICON_ERROR);
-                        ui_print("Installation aborted.\n");
+                        ui_print("Installation fcking aborted.\n");
                     } else if (!ui_text_visible()) {
                         return;  // reboot if logs aren't visible
                     } else {
